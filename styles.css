@@ -1,0 +1,201 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 3px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+::selection {
+  color: #f2f2f2;
+  background: #6d80f8;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  background: linear-gradient(135deg, #9a9aff 10%, #4153f6 100%);
+}
+
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+body::before {
+  clip-path: circle(30% at left 20%);
+  opacity: 0.4;
+  background-image: linear-gradient(135deg, #8f41f6 10%, #ae9aff 100%);
+}
+
+body::after {
+  clip-path: circle(25% at right 80%);
+  opacity: 0.4;
+  background-image: linear-gradient(135deg, #8f41f6 10%, #ae9aff 100%);
+}
+
+header {
+  height: 85vh;
+  width: 79%;
+  margin: auto;
+  background: rgba(145, 145, 145, 0.1);
+  box-shadow: 18px 20px 47px 20px rgba(0, 0, 0, 0.15);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  z-index: 12;
+  border-radius: 69px;
+  position: relative;
+}
+
+.navbar {
+  margin: auto;
+  width: 100%;
+  margin-top: 13px;
+  padding: 35px 50px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo a {
+  color: #000;
+  font-size: 43px;
+  font-weight: 600;
+}
+
+.navbar .menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar .menu li {
+  margin: 0 6px;
+}
+
+.navbar .menu li a {
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+
+.navbar .menu li a:hover {
+  color: #f2f2f2;
+}
+
+.navbar input {
+  outline: none;
+  background-image: linear-gradient(135deg, #9a9aff 10%, #4153f6 100%);
+  border-radius: 12px;
+  font-size: 18px;
+  color: #d4d4d4;
+  padding: 6px 15px;
+  border: none;
+  margin: 7px 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 0px solid #fff;
+  box-shadow: 1px 1px 6px #fff;
+}
+
+.navbar input:hover {
+  transform: scale(0.8);
+}
+
+.content {
+  width: 40%;
+  margin: 10px 0px 0px 64px;
+}
+
+.content h2 {
+  font-size: 30px;
+  font-weight: 600;
+  font: revert;
+}
+
+.content p {
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.end {
+  position: absolute;
+  right: 50px;
+  bottom: 40px;
+}
+
+.end .play {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.end .play::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 50px;
+  background: #000;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -58px;
+}
+
+.end i {
+  height: 40px;
+  width: 40px;
+  border: 2px solid #000;
+  line-height: 38px;
+  text-align: center;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  header .navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 5px;
+  }
+
+  .navbar .menu {
+    margin: 10px 0 20px 0;
+  }
+
+  .content {
+    margin: 17px 0 0 20px;
+    width: 76%;
+  }
+
+  .content h2 {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 410px) {
+  header {
+    height: 100vh;
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  header .navbar {
+    padding: 15px 10px;
+  }
+}
